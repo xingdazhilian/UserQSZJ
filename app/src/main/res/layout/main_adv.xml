@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/page_return"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="left|center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/page_return_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:letterSpacing="0.2"
+                android:text="活动"
+                android:textColor="#333333"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="right|center">
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/mWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></WebView>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:background="@drawable/shadow_bottom_layout" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

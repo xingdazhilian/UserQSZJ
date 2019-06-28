@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="请选择充值金额"
+                    android:textColor="#666666"
+                    android:textSize="13sp" />
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:numColumns="2" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/bottom_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        tools:background="#F44336" />
+
+                    <LinearLayout
+                        android:id="@id/bottom_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/t_1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp"
+                                tools:text="包月套餐" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end">
+
+                                <TextView
+                                    android:id="@+id/t_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp"
+                                    tools:text="199" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:text="元"
+                                    android:textColor="#ffffff"
+                                    android:textSize="9sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|start"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/t_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#ffffff"
+                                    android:textSize="8sp"
+                                    tools:text="有效期内无限次换电" />
+
+                                <TextView
+                                    android:id="@+id/t_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:textColor="#ffffff"
+                                    android:textSize="8sp"
+                                    tools:text="有效期内无限次换电有效期内无限次换电" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="end">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/t_7_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
+                                        android:textSize="10sp"
+                                        tools:text="电动车" />
+
+                                    <TextView
+                                        android:id="@+id/t_7_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:textColor="#ffffff"
+                                        android:textSize="8sp"
+                                        tools:text="210元" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/i_7"
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="#ffffff"
+                                    android:visibility="gone"
+                                    tools:visibility="visible" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/t_6_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
+                                        android:textSize="10sp"
+                                        tools:text="电池x1" />
+
+                                    <TextView
+                                        android:id="@+id/t_6_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:textColor="#ffffff"
+                                        android:textSize="8sp"
+                                        tools:text="50元" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/i_6"
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="#ffffff"
+                                    android:visibility="gone"
+                                    tools:visibility="visible" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|end"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/t_5_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#ffffff"
+                                        android:textSize="8sp"
+                                        tools:text="换电费" />
+
+                                    <TextView
+                                        android:id="@+id/t_5_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:textColor="#ffffff"
+                                        android:textSize="8sp"
+                                        tools:text="199元" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+    <!--暂无数据空页面-->
+    <LinearLayout
+        android:id="@+id/none_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/none_data" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="暂无数据"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!--自制阴影效果-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:src="@drawable/shadow_bottom_layout" />
+</RelativeLayout>

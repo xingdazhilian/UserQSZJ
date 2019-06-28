@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/login_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/laoginFocus"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/page_return"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/page_close" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-60dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/top_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/button_corners_white_radius_20"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/tel" />
+
+                    <EditText
+                        android:id="@+id/login_phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="left|center"
+                        android:hint="用户名"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/button_corners_white_radius_20"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/key" />
+
+                    <EditText
+                        android:id="@+id/login_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="left|center"
+                        android:hint="验证码"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:singleLine="true"
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:id="@+id/get_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/get_number_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/button_corners_gray_radius_10"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="获取短信验证码"
+                            android:textColor="#666666"
+                            android:textSize="9dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/submit"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_corners_green_radius_20"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="登 录"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

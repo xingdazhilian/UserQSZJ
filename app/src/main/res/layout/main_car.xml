@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <!--titleLayout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/page_return"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/cd3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/page_return_black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:letterSpacing="0.2"
+            android:maxLines="1"
+            android:text="@string/myCar"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <!--title下方的页面-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--没有绑定车辆的页面-->
+        <LinearLayout
+            android:id="@+id/none_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/had_no_car"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/gray_car"
+                android:src="@drawable/electrombile_binding" />
+        </LinearLayout>
+        <!--有绑定车辆的页面-->
+        <LinearLayout
+            android:id="@+id/data_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/electrombile_bg"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <!--车辆图标守护信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/top_image"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/cd4"
+                    tools:src="@drawable/electrombile_binding" />
+
+                <TextView
+                    android:id="@+id/code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="1234567"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/unbind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_corners_white_red_radius_5"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/unbind"
+                    android:textColor="#ff0000"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/is_online_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/cd5"
+                    android:textColor="#333333"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/imei_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    tools:text="设备ID：0123456789" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    tools:text="有效日期：2999-01-01 至 3099-11-11" />
+            </LinearLayout>
+            <!--下方的两个横向View-->
+            <LinearLayout
+                android:id="@+id/bottom_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:padding="10dp">
+                <!--电子围栏-->
+                <LinearLayout
+                    android:id="@+id/panel_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/cd6"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/electrombile_enclosure" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cd7"
+                        android:textColor="#ff9600"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--实时跟踪-->
+                <LinearLayout
+                    android:id="@+id/panel_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_corners_white_radius_5"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/cd8"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/electrombile_track" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cd9"
+                        android:textColor="#ff9600"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--轨迹跟踪-->
+                <LinearLayout
+                    android:id="@+id/panel_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_corners_white_radius_5"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/cd10"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/electrombile_trajectory" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cd11"
+                        android:textColor="#ff9600"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <!--远程启动-->
+                <LinearLayout
+                    android:id="@+id/panel_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/cd12"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/electrombile_open" />
+
+                    <TextView
+                        android:id="@+id/t_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cd13"
+                        android:textColor="#ff9600"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+                <!--远程刹车-->
+                <LinearLayout
+                    android:id="@+id/panel_5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/cd14"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/electrombile_brake" />
+
+                    <TextView
+                        android:id="@+id/t_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/cd15"
+                        android:textColor="#ff9600"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--阴影View-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@drawable/shadow_bottom_layout" />
+    </FrameLayout>
+</LinearLayout>

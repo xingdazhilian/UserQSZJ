@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/zhifubao_panel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/t_1"
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="支付宝支付"
+                android:textColor="#333333"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/t_2"
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="支付宝支付"
+                android:textColor="#e94b19"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/t_3"
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="支付宝支付"
+                android:textColor="#999999"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/fl_my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="top"
+            android:background="#99000000"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/capture_imageview_back"
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center|left"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:src="@drawable/page_return" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_weight="6"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="扫一扫"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:gravity="center|left"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="将二维码/条码放入取景框内"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#cccccc"
+                    android:textSize="9dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="即可自动扫描"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#cccccc"
+                    android:textSize="9dp" />
+
+
+                <ImageView
+                    android:id="@+id/light"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/lamp" />
+
+
+                <EditText
+                    android:id="@+id/input_code"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_corners_white_radius_2"
+                    android:gravity="center"
+                    android:hint="请输入您的设备号"
+                    android:inputType="text"
+                    android:textColor="#666666"
+                    android:textColorHint="#cccccc"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/submit_code"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_corners_green_radius_2"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</merge>

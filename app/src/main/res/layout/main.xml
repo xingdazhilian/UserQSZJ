@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--右侧主界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--预留状态栏-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+        <!--title-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+            <!--title_left-->
+            <LinearLayout
+                android:id="@+id/user_info"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/user_icon"
+                    android:src="@drawable/center" />
+            </LinearLayout>
+            <!--title_text-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <!--title_right-->
+            <FrameLayout
+                android:id="@+id/shop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/message_icon"
+                    android:src="@drawable/home_news" />
+
+                <FrameLayout
+                    android:id="@+id/nor_read_red_point_panel"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginBottom="9dp">
+
+                    <ImageView
+                        android:id="@+id/message_red_icon"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/button_corners_green_radius_20"
+                        android:contentDescription="@string/message_red_point" />
+
+                    <TextView
+                        android:id="@+id/nor_read_red_point"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="6sp"
+                        tools:ignore="SmallSp"
+                        tools:text="5" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <!--导入mapview页面及弹窗-->
+        <include layout="@layout/main_map" />
+    </LinearLayout>
+
+    <!--左侧抽屉-->
+    <LinearLayout
+        android:id="@+id/list_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+        <TextView
+            android:id="@+id/foot_text"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="10dp"
+            android:textColor="#cccccc"
+            android:textSize="9sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

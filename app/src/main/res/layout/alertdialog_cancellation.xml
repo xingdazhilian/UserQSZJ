@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alertdialog_style"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/alertDialogTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注销用户"
+                    android:textColor="#333333"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/input_code"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_corners_white_gray_radius_2_width_1"
+                        android:hint="请输入您收到的验证码"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="#333333"
+                        android:textColorHint="#999999"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/get_code"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/button_corners_green_radius_2"
+                        android:gravity="center"
+                        android:text="获取验证码"
+                        android:textColor="#ffffff"
+                        android:textSize="11dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/success"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_left_bottom_corners_radius_10"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="确定"
+                    android:textColor="#429c4e"
+                    android:textSize="13dp"></TextView>
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="fill_parent"
+                    android:background="#cccccc" />
+
+                <TextView
+                    android:id="@+id/error"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_right_bottom_corners_radius_10"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="取消"
+                    android:textColor="#429c4e"
+                    android:textSize="13dp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
